@@ -1,9 +1,9 @@
 import axios from 'axios'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navquote from './Navquote'
 
 const Viewquote = () => {
-    const [quotes,changeQuotes]=(
+    const [quotes,changeQuotes]=useState(
         {"quotes":[]}
     )
     const fetchData=()=>(
@@ -31,6 +31,7 @@ const Viewquote = () => {
                                 <table className="table table-striped table-hover">
                                     <thead className="table-dark">
                                         <tr>
+                                            
                                             <th scope="col">Quote</th>
                                             <th scope="col">Author</th>
                                         </tr>
