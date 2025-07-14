@@ -1,24 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Addquote from './components/Addquote';
+import Searchquote from './components/Searchquote';
+import Deletequote from './components/Deletequote';
+import Viewquote from './components/Viewquote';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={ <Addquote/> }/>
+      <Route path='/Searchq' element={ <Searchquote/> }/>
+      <Route path='/Deleteq' element={ <Deletequote/> }/>
+      <Route path='/Viewq' element={ <Viewquote/> }/>
+    </Routes>
+    </BrowserRouter>
   );
 }
 
